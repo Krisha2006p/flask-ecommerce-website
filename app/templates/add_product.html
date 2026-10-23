@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Add product</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="product_name">Product Name: </label>
+        <input type="text" id="product_name" name="product_name" required><br>
+
+        <label for="product_price">Price: </label>
+        <input type="number" id="product_price" name="price" step="0.01" min="0" required><br>
+
+        <label for="product_desc">Description: </label>
+        <input type="text" id="product_desc" name="description"><br>
+
+        <label for="product_stock">Stock: </label>
+        <input type="number" id="product_stock" name="stock" min="0" step="1" required><br>
+
+        <label for="product_image">Product Image:</label>    <!-- I will be going to store only file name of the image not the image itself -->
+        <input type="file" id="product_image" name="product_image" accept="image/*">
+
+        <button type="submit">Add Product</button>
+    </form>
+
+{% endblock %}
