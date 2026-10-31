@@ -25,6 +25,14 @@ def products():
     p = Product.query.all()
     return render_template("products.html", items = p)
 
+@main.route("/cart")
+def cart():
+    return render_template("coming_soon.html", feature="Cart")
+
+@main.route("/login")
+def login():
+    return render_template("coming_soon.html", feature="Login")
+
 @main.route("/admin/products/add", methods=['GET', 'POST'])  # GET: When we open /admin/products/add, Flask displays the form. , POST: When we click the Add Product button, Flask receives the submitted values.
 def add_product():
     if request.method == "POST":

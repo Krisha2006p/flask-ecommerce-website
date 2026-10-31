@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Ecommerce Store{% endblock %}</title>
-<!--    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
@@ -16,10 +15,10 @@
         <h2>MyStore</h2>
 
         <nav>
-            <a href="/">Home</a>
-            <a href="/products">Products</a>
-            <a href="/cart">Cart</a>
-            <a href="/login">Login</a>
+            <a href="{{ url_for('main.home') }}">Home</a>
+            <a href="{{ url_for('main.products') }}">Products</a>
+            <a href="{{ url_for('main.cart') }}">Cart</a>
+            <a href="{{ url_for('main.login') }}">Login</a>
         </nav>
     </header>
 

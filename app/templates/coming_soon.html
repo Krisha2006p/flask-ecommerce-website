@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ feature }} | MyStore
+{% endblock %}
+
+{% block content %}
+    <h1>{{ feature }}</h1>
+
+    <p>{{ feature }} is coming soon. In the meantime, browse our <a href="{{ url_for('main.products') }}">products</a>.</p>
+{% endblock %}

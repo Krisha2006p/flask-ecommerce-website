@@ -1,7 +1,7 @@
 """Add image filename to products
 
 Revision ID: 0e3200b6cf53
-Revises: 
+Revises: 4c8d2f1a9b7e
 Create Date: 2026-10-21 14:42:16.616577
 
 """
@@ -11,7 +11,7 @@ import sqlalchemy as sa
 
 # revision identifiers, used by Alembic.
 revision = '0e3200b6cf53'
-down_revision = None
+down_revision = '4c8d2f1a9b7e'
 branch_labels = None
 depends_on = None
 
