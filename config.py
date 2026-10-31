@@ -1,3 +1,6 @@
+import os
+
+
 class Config:
-    SECRET_KEY = "W}o[MN1h>Y2<xy:I"
-    SQLALCHEMY_DATABASE_URI = "sqlite:///shop.db"
+    SECRET_KEY = os.environ.get("SECRET_KEY", "dev-only-change-me")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL", "sqlite:///shop.db")
